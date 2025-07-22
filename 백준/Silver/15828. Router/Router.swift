@@ -8,11 +8,17 @@ while true {
     let cur = Int(readLine()!)!
     
     if cur == 0 {
-        arr.removeFirst()
+        // 버퍼가 비어있으면 삭제하지 않는다.
+        if !arr.isEmpty {
+            arr.removeFirst()
+        }
     } else if cur == -1 {
         break
     } else {
-        arr.append(cur)
+        // 버퍼가 꽉 찼으면 넣지 않는다.
+        if arr.count < n {
+            arr.append(cur)
+        }
     }
 }
 
