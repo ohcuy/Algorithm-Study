@@ -1,8 +1,8 @@
 n = int(input())
-s = input().strip()
+numbers = input()
 
-result = 0
-for c in s:
-    result += int(c)
+sum = 0
+for i in range(n):
+    sum += int(numbers[i])
 
-print(result)
+print(sum)
